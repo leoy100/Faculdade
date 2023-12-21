@@ -1,0 +1,26 @@
+package questao4;
+
+public class MeuNumero {
+	public static String media(String txt) throws NumeroNegativoException
+
+	{
+		String [] array = txt.split("#");
+		int n = array.length;
+		double soma = 0;
+		for (int i = 0; i < n; i++)
+		{
+			String nx = array[i];
+			int numero = Integer.parseInt(nx);
+			if (numero < 0)
+			{
+				throw new NumeroNegativoException(numero); 
+			}
+			else
+			{
+				soma += numero;
+			}
+		}
+		double media = soma/n;
+		return ("A média é: [" + media + "]");
+	}
+}

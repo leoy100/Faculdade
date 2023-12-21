@@ -1,0 +1,72 @@
+package questao2;
+
+import java.util.Iterator;
+import java.util.Set;
+
+public class Utils 
+{
+	public static void verifica(String texto) throws TextoCurtoException
+	{
+		char [] x = texto.toCharArray();
+		int c = 0;
+		for(int i = 0; i < x.length; i++)
+		{
+			if (x[i] == ' ')
+			{
+				c++;
+			}
+		}
+		int count = x.length - c;
+		//System.out.println(count);
+		
+		try 
+		{
+			if(count < 10)
+			{
+				throw new TextoCurtoException("Texto inserido com " + count + " caracteres");
+				//System.out.println("False");
+			}
+		}
+		catch (TextoCurtoException erro) 
+		{
+			System.out.println(erro);
+		}
+		
+//		if(count >= 10)
+//		{
+//			System.out.println("True");
+//		}
+	}
+	
+	public static void moderar(String texto)
+	//Esse método deve substituir todos os palavrões encontrados em “texto” por “####”
+	{
+		//System.out.println("Começo de Utils.moderar");
+		Set <String> p = Utilidades.getPalavroes();
+		Iterator <String> it = p.iterator();
+		String [] txt = texto.split(" ");
+		String novaPalavra = "";
+		//it.next() = palavroes
+		//txt = vetor de palavras do texto inserido
+		while (it.hasNext()){
+			String px = it.next(); //palavrao a ser comparado
+			
+			System.out.println("Começo de Utils.moderar" + txt[i] + px);
+			if (texto.contains(px)){
+				System.out.println(texto);
+				//Substituir txt[i] por ######
+				System.out.println(texto);
+				int n = texto.length();
+				System.out.println(n);
+				for(int j = 0; j < n; j++) {
+	                   novaPalavra += "#";
+				}
+				System.out.println("Print: " + novaPalavra);
+			}
+			txt[i] = novaPalavra;
+			
+		}
+		System.out.println(novaPalavra);
+		
+	}
+}

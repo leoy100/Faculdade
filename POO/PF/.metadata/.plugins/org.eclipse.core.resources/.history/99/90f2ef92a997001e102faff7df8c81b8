@@ -1,0 +1,35 @@
+package questao2;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Utilidades 
+{
+	public static Set getPalavroes() 
+	{
+		Set <String> p = new HashSet();
+		p.add("bonita");
+		p.add("feia");
+		return p;
+	}
+	
+	
+
+	
+	public static void main(String[]args) throws TextoCurtoException
+	{
+		Scanner teclado = new Scanner(System.in);
+		String texto = teclado.nextLine();
+		teclado.close();
+		try {
+			Utils.verifica("Minha             ");
+		}
+		catch (TextoCurtoException erro) {
+			System.out.println("Texto inserido com menos de 10 caracteres" + erro);
+		}
+		//Utils.moderar("Minha casa é bonita");
+	}
+	
+}

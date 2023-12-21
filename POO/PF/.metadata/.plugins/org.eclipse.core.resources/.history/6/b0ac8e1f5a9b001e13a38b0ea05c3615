@@ -1,0 +1,56 @@
+package questao2;
+
+import java.util.Iterator;
+import java.util.Set;
+
+public class Utils 
+{
+	public static void verifica(String texto) throws TextoCurtoException
+	{
+		System.out.println(texto.length());
+		char [] x = texto.toCharArray();
+		int c = 0;
+		for(int i = 0; i < x.length; i++){
+			if (x[i] == ' ')
+			{
+				c++;
+			}
+		}
+		int count = x.length - c;
+		
+		if(count < 10){
+			throw new TextoCurtoException(count);
+		}
+	}
+	
+	public static void moderar(String texto)
+	//Esse método deve substituir todos os palavrões encontrados em “texto” por “####”
+	{
+		//System.out.println("Começo de Utils.moderar");
+		Set <String> p = Utilidades.getPalavroes();
+		//Iterator <String> it = p.iterator();
+		String [] txt = texto.split(" ");
+		//it.next() = palavroes
+		//txt = vetor de palavras do texto inserido
+		//while (it.hasNext()){
+			//String px = it.next(); //palavrao a ser comparado
+			for (int i = 0; i < txt.length; i++){
+				//String novaPalavra = "";
+				if (p.contains(txt[i])){ 
+					//Substituir txt[i] por ######
+//					int n = txt[i].length(); 
+//					for(int j = 0; j < n; j++) {
+//	                    novaPalavra += "#";
+					txt[i] = "#".repeat(txt[i].length());
+				}
+			}
+		//}
+//		String textoFinal = "";
+//		for(int k = 0; k < txt.length; k++) {
+//			textoFinal += txt[k] + " ";
+//		}
+//		System.out.println(textoFinal);
+		
+		System.out.println(String.join(" ", txt));
+	}
+}

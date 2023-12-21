@@ -1,0 +1,13 @@
+package questao2;
+
+public class TextoCurtoException extends Exception
+{
+	public TextoCurtoException()
+	{
+	}
+	
+	public TextoCurtoException(String txt)
+	{
+		super("Texto inserido com " + txt.length() + " caracteres.");
+	}
+}

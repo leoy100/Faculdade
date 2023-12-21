@@ -1,0 +1,14 @@
+package sobrecargadeconstrutores;
+
+public class ClientePF extends Cliente{
+	public ClientePF(String nome, String cpf)
+	{
+		super(nome,cpf);
+	}
+	
+	public ClientePF(String nome, String cpf, String profissao)
+	{
+		this(nome,cpf,null);
+	}
+
+}

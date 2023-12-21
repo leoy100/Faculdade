@@ -1,0 +1,22 @@
+package questao4;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args){
+		// TODO Auto-generated method stub
+		System.out.print("Insira uma String que contenha números separados pelo caractere ‘#”: ");
+		Scanner teclado = new Scanner(System.in);
+		String txt = teclado.nextLine();
+		teclado.close();
+		try 
+		{
+			System.out.println(MeuNumero.media(txt));
+		}
+		catch (NumeroNegativoException erro)
+		{
+			System.out.println(erro);
+		}
+	}
+}

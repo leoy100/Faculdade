@@ -1,0 +1,43 @@
+p2 = 4 => 33 + 1                  	Console:
+				Antares    
+				Sol
+				81
+				Canopus	
+v1 = Canopus p1 = 1		81
+v2 = Sol     p1 = 1		1
+v3 = Altair  p1 = 1  		33
+				Sol
+				1
+				Sol
+						
+x = 81
+v3 = teste3 => new Estrela (Vega p1 = 1)
+
+
+
+
+
+
+teste1
+-----------------
+v2' => v1
+v1' => v2 
+v1' => v2' => v1
+v2' => v1' => v1
+
+teste2
+-----------------
+x' => v1.p1 = 1 => 18
+a' => x = 81 => 12
+arv' => v1 => new Estrela (p1 = 1 => 46)
+
+teste3
+-----------------
+v2' => v2 => new Estrela(Vega)
+return v2
+
+v3 = teste3
+----------------
+v2' => v2 => new Estrela(Vega)
+return v2'
+

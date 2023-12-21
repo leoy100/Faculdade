@@ -1,0 +1,41 @@
+package questao2;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Utilidades 
+{
+	public static Set <String>getPalavroes() 
+	{
+		Set <String> p = new HashSet <String>();
+		p.add("bonita");
+		p.add("feia");
+		p.add("preta");
+		return p;
+	}
+
+	
+	public static void main(String[]args) throws TextoCurtoException
+	{
+		Scanner teclado = new Scanner(System.in);
+		String texto = teclado.nextLine();
+		teclado.close();
+		try {
+			Utils.verifica(texto);
+		}
+		catch (TextoCurtoException erro) {
+			System.out.println(erro);
+		}
+//		String t = "Minha casa é bonita.";
+//		t = "aaaaaaaaaaaaaaaaaaaaaaaaaa";
+//		System.out.println(t.contains(texto));
+//		System.out.println(t);
+//		System.out.println(t.length());
+		
+		//Utils.moderar("Minha casa é bonita");
+	}
+	
+}
