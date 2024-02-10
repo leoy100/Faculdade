@@ -52,12 +52,11 @@ public abstract class Livro {
 		{
 			//Livro u = (Livro) o;
 			String x1 = this.getISBN();
-			System.out.println("Teste equals");
-			System.out.println(x1);
+			//System.out.println("Teste equals");
+			//System.out.println(x1);
 			String x2 = ((Livro) o).getISBN();
-			System.out.println(x2);
-			if (x1 == x2)
-				
+			//System.out.println(x2);
+			if (x1 == x2)	
 			{
 				return true;
 			}
